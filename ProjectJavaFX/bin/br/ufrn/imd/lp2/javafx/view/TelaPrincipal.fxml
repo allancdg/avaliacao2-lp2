@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<BorderPane prefHeight="500.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.ufrn.imd.lp2.javafx.controller.TelaPrincipalController">
+   <center>
+      <Pane prefHeight="400.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+         <children>
+            <Text layoutX="198.0" layoutY="20.0" strokeType="OUTSIDE" strokeWidth="0.0" text="  Caixa | Vendas" textAlignment="CENTER">
+               <font>
+                  <Font name="Broadway" size="14.0" />
+               </font>
+            </Text>
+            <Text layoutX="26.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CPF  ( 111.222.333-44 )" />
+            <TextField id="cpfInput" fx:id="cpfInput" layoutX="26.0" layoutY="51.0" />
+            <Label fx:id="LabelTextComprador" layoutX="226.0" layoutY="25.0" prefHeight="53.0" prefWidth="181.0" />
+            <Text layoutX="26.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CNPJ  ( 12.345.678/0001-00 )" />
+            <TextField id="cnpjInput" fx:id="cnpjInput" layoutX="26.0" layoutY="106.0" />
+            <Label fx:id="LabelTextVendedor" layoutX="225.0" layoutY="92.0" prefHeight="53.0" prefWidth="184.0" />
+            <Button layoutX="26.0" layoutY="138.0" mnemonicParsing="false" onMouseClicked="#atualizarBotao" text="Atualizar" />
+            <Text fx:id="TextItensParaVenda" layoutX="48.0" layoutY="230.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Itens para venda" wrappingWidth="134.0">
+               <font>
+                  <Font name="Broadway" size="14.0" />
+               </font>
+            </Text>
+            <ListView fx:id="ListVenda" layoutX="16.0" layoutY="236.0" prefHeight="200.0" prefWidth="200.0" />
+            <Text fx:id="TextCarrinho" layoutX="349.0" layoutY="229.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Carrinho">
+               <font>
+                  <Font name="Broadway" size="14.0" />
+               </font>
+            </Text>
+            <ListView fx:id="ListCarrinho" layoutX="283.0" layoutY="236.0" prefHeight="200.0" prefWidth="200.0" />
+            <Button fx:id="incluirBotao" layoutX="224.0" layoutY="324.0" mnemonicParsing="false" onMouseClicked="#incluirBotao" text="Incluir" />
+            <Text fx:id="textDataAtual" layoutX="425.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data" wrappingWidth="69.0">
+               <font>
+                  <Font name="Arial Narrow" size="12.0" />
+               </font>
+            </Text>
+            <Text fx:id="valorTotalOut" layoutX="381.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total : R$ 0.00">
+               <font>
+                  <Font name="Broadway" size="12.0" />
+               </font>
+            </Text>
+            <MenuButton fx:id="selecionarPagamento" layoutX="334.0" layoutY="461.0" mnemonicParsing="false" text="Selecionar pagamento">
+              <items>
+                <MenuItem mnemonicParsing="false" text="PIX" />
+                <MenuItem mnemonicParsing="false" text="Crédito" />
+                  <MenuItem mnemonicParsing="false" text="Débito" />
+                  <MenuItem mnemonicParsing="false" text="Boleto (30 dias)" />
+              </items>
+            </MenuButton>
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
