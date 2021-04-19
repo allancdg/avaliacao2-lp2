@@ -67,20 +67,20 @@ public class Vendedor extends Pessoa {
 		Produto novo_produto = new Produto(nome, preco);
 		catalogo_produtos.add(novo_produto);
 	}
-	/*
-	// ~~~~ METODO EQUALS COMPARANDO CNPJS ~~~~
-	public boolean equals(Object other) {
-		if (other == null || !other.getClass().equals(Vendedor.class)) {
-			return false;
-		} 
-	 	Vendedor otherVendedores = (Vendedor) other;
-		return otherVendedores.CNPJ.equals(this.CNPJ);
+	
+	//TO-DO
+	public void setPagamentoVista(double valor_total, int i) {
+		// TODO Auto-generated method stub
+		
 	}
 	
-	// ~~~~ METODO AUXILIAR DO HASHCODE ~~~~
-	public int hashCode() { 
-		return this.CNPJ.hashCode();
+	public void setPagamentoVista(double valor_total, double d) {
+		// TODO Auto-generated method stub
+		
 	}
-	// ~~~~ FIM DOS METODOS AUXILIARES ~~~~
-	*/
+	
+	public void setPagamentoParcelado(double valor_total, double d) {
+		// TODO Auto-generated method stub
+		
+	}
 }

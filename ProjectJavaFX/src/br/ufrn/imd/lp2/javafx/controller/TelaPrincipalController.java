@@ -117,6 +117,7 @@ public class TelaPrincipalController {
 	
 	Produto produtoSelecionadoListview = new Produto();
 	List<Produto> listProdutoCarrinho = new ArrayList<>();
+	double valorOut = 0.0;
 	@FXML
 	public void incluirBotao(MouseEvent event) {
 		// ~~~~ INICIO DA SELECAO EM ListVenda (LISTVIEW) ~~~~
@@ -124,6 +125,8 @@ public class TelaPrincipalController {
 		listProdutoCarrinho.add(produtoSelecionadoListview);
 		obsListCarrinho = FXCollections.observableArrayList(listProdutoCarrinho);
 		ListCarrinho.setItems(obsListCarrinho);
+		valorOut += produtoSelecionadoListview.getPreco_unitario();
+		valorTotalOut.setText("Total: R$ " + valorOut);
 		// ~~~~ FIM DA SELECAO EM ListVenda (LISTVIEW) ~~~~
     }
 	
